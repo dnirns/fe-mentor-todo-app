@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <Nav />
-      <div className='container px-8 mx-auto'>
+      <div className='container sm:px-10 px-6 mx-auto'>
         <Home />
       </div>
     </>
