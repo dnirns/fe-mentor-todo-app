@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { shorten } from '../api/shorten'
-import Spinner from '../common/Spinner'
 
 const Search = () => {
   const [url, setUrl] = useState('')
