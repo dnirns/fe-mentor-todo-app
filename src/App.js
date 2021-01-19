@@ -7,7 +7,9 @@ const App = () => {
   return (
     <>
       <Nav />
-      <Home />
+      <div className='container px-8 mx-auto'>
+        <Home />
+      </div>
     </>
   )
 }

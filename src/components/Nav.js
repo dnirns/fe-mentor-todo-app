@@ -14,8 +14,8 @@ const Nav = ({ logo, link1, link2, link3, link4 }) => {
   }
 
   return (
-    <nav className='flex fixed w-full flex-wrap items-center p-4 '>
-      <p className='text-4xl font-bold px-4'>Shortly</p>
+    <nav className='container flex w-full flex-wrap items-center py-4 px-8 mx-auto'>
+      <p className='text-3xl font-bold pr-4'>Shortly</p>
 
       <div className='flex md:hidden'>
         <button id='hamburger' onClick={handleHamburger}>
@@ -39,7 +39,7 @@ const Nav = ({ logo, link1, link2, link3, link4 }) => {
         </a>
         <a
           href='/'
-          className='block md:inline-block hover:text-blue-500 px-4 py-2'
+          className='block md:inline-block hover:text-blue-200 px-4 py-2'
         >
           Pricing
         </a>
@@ -50,11 +50,19 @@ const Nav = ({ logo, link1, link2, link3, link4 }) => {
           Resources
         </a>
       </div>
-      <div className={`${toggle} md:flex-1 w-auto md:w-full md:text-right`}>
-        <a className='block md:inline-block px-4 py-2' href='/'>
+      <div
+        className={`${toggle} md:flex-1 md:flex md:w-full md:justify-end md:text-right`}
+      >
+        <a
+          className='block md:inline-block px-4 py-2 text-neutral-gray'
+          href='/'
+        >
           Login
         </a>
-        <a className='block md:inline-block px-4 py-2' href='/'>
+        <a
+          className='block md:inline-block bg-primary-cyan rounded-full py-2 px-6 text-white hover:opacity-90'
+          href='/'
+        >
           Sign Up
         </a>
       </div>

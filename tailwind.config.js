@@ -12,6 +12,9 @@ module.exports = {
         'neutral-v-dark-blue': 'hsl(255, 11%, 22%)',
         'neutral-v-dark-violet': 'hsl(260, 8%, 14%)',
       },
+      backgroundImage: (theme) => ({
+        'desktop-search-bg': 'url("/src/assets/images/bg-shorten-desktop.svg")',
+      }),
     },
   },
   variants: {
