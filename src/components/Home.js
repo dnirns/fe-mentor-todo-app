@@ -1,6 +1,6 @@
 import React from 'react'
 import Search from './Search'
-// import searchBgDesktop from '../assets/images/bg-shorten-desktop.svg'
+
 const Home = () => {
   return (
     <div className='text-black text-4xl container py-10'>
@@ -19,7 +19,6 @@ const Home = () => {
         </button>
       </div>
       <Search />
-      {/* <div className='bg-desktop-search-bg h-full w-full' /> */}
     </div>
   )
 }

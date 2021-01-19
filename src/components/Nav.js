@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Nav = ({ logo, link1, link2, link3, link4 }) => {
+const Nav = () => {
   const [hidden, setHidden] = useState(true)
   const [toggle, setToggle] = useState('hidden')
 
@@ -17,7 +17,7 @@ const Nav = ({ logo, link1, link2, link3, link4 }) => {
     <nav className='container flex w-full flex-wrap items-center py-4 px-8 mx-auto'>
       <p className='text-3xl font-bold pr-4'>Shortly</p>
 
-      <div className='flex md:hidden'>
+      <div className='flex flex-1 w-100 justify-end md:hidden'>
         <button id='hamburger' onClick={handleHamburger}>
           <img
             alt='icon'
@@ -51,7 +51,7 @@ const Nav = ({ logo, link1, link2, link3, link4 }) => {
         </a>
       </div>
       <div
-        className={`${toggle} md:flex-1 md:flex md:w-full md:justify-end md:text-right`}
+        className={`${toggle} flex flex-col md:flex md:flex-row flex-1 w-100 justify-end items-end text-right`}
       >
         <a
           className='block md:inline-block px-4 py-2 text-neutral-gray'
@@ -59,12 +59,14 @@ const Nav = ({ logo, link1, link2, link3, link4 }) => {
         >
           Login
         </a>
-        <a
-          className='block md:inline-block bg-primary-cyan rounded-full py-2 px-6 text-white hover:opacity-90'
-          href='/'
-        >
-          Sign Up
-        </a>
+        <div className='bg-primary-cyan rounded-full w-auto'>
+          <a
+            className='block md:inline-block py-2 px-6 text-white hover:opacity-90'
+            href='/'
+          >
+            Sign Up
+          </a>
+        </div>
       </div>
     </nav>
   )
