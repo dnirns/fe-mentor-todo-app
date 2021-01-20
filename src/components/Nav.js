@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import logo from '../assets/images/logo.svg'
 
 const Nav = () => {
   const [hidden, setHidden] = useState(true)
@@ -14,10 +15,10 @@ const Nav = () => {
   }
 
   return (
-    <nav className='container flex w-full flex-wrap items-center py-4 px-8 mx-auto'>
-      <p className='text-3xl font-bold pr-4'>Shortly</p>
+    <nav className='container flex w-full flex-wrap items-center py-4 px-8 mx-auto font-bold text-sm'>
+      <img className='mr-4' src={logo} alt='shortly logo' />
 
-      <div className='flex flex-1 w-100 justify-end md:hidden'>
+      <div className=' flex flex-1 w-100 justify-end md:hidden'>
         <button id='hamburger' onClick={handleHamburger}>
           <img
             alt='icon'
@@ -29,7 +30,7 @@ const Nav = () => {
         </button>
       </div>
       <div
-        className={`${toggle} md:flex text-neutral-gray w-full md:w-auto text-right text-bold mt-5 md:mt-0`}
+        className={`${toggle} md:flex text-neutral-gray w-full md:w-auto text-right  mt-5 md:mt-0`}
       >
         <a
           href='/'
