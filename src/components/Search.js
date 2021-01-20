@@ -1,23 +1,6 @@
 import React from 'react'
-// import { shorten } from '../api/shorten'
 
-const Search = ({ shortenUrl, currentUrl, setCurrentUrl }) => {
-  // const [url, setUrl] = useState('')
-  // const [shortenedUrl, setShortenedUrl] = useState(null)
-  // const [searching, setSearching] = useState(false)
-
-  // const shortenApi = async () => {
-  //   setSearching(true)
-  //   setUrl('')
-  //   try {
-  //     const res = await shorten(url)
-  //     setShortenedUrl(res.data.result.short_link)
-  //     setSearching(false)
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-
+const Search = ({ shortenUrl, currentUrl, setCurrentUrl, searching }) => {
   return (
     <div className='container mx-auto'>
       <div className='bg-primary-dark-violet rounded-lg'>
@@ -28,6 +11,7 @@ const Search = ({ shortenUrl, currentUrl, setCurrentUrl }) => {
             placeholder='Shorten a link here...'
             onChange={(e) => setCurrentUrl(e)}
           />
+
           <button
             className='rounded-md mx-4 mt-6 sm:mt-0 px-5 py-3 bg-primary-cyan text-white text-base hover:opacity-90 flex-1 sm:flex-none'
             onClick={shortenUrl}
@@ -36,12 +20,6 @@ const Search = ({ shortenUrl, currentUrl, setCurrentUrl }) => {
           </button>
         </div>
       </div>
-
-      {/* {searching === true ? (
-        <div className='loader' />
-      ) : (
-        <p className='text-2xl'>{shortenedUrl}</p>
-      )} */}
     </div>
   )
 }
